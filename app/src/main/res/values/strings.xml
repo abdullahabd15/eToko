@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Kasir Ku</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="colon">:</string>
+
+    <string name="btn_sell">Jual</string>
+    <string name="btn_add">Tambah</string>
+
+    <string name="title_pcs">PCS</string>
+    <string name="title_product_name">Nama Produk</string>
+    <string name="title_price">Harga</string>
+    <string name="title_piece_product">Satuan</string>
+    <string name="title_product_code">Kode Produk</string>
+    <string name="title_capital_price">Harga Modal</string>
+    <string name="title_sell_price">Harga Jual</string>
+    <string name="title_product_stock">Jumlah Stock</string>
+    <string name="title_list_product">Lihat List Produk</string>
+    <string name="title_add_product">Tambah Produk Baru</string>
+</resources>
