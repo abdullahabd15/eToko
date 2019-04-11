@@ -18,5 +18,6 @@
     <string name="title_sell_price">Harga Jual</string>
     <string name="title_product_stock">Jumlah Stock</string>
     <string name="title_list_product">Lihat List Produk</string>
+    <string name="title_list_all_product">List Produk</string>
     <string name="title_add_product">Tambah Produk Baru</string>
 </resources>

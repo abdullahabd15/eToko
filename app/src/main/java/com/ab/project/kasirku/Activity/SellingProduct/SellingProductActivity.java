@@ -1,6 +1,7 @@
 package com.ab.project.kasirku.Activity.SellingProduct;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -8,6 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.ab.project.kasirku.Activity.AddProduct.AddProductActivity;
 import com.ab.project.kasirku.Activity.ProductList.ProductListActivity;
@@ -20,6 +22,7 @@ public class SellingProductActivity extends AppCompatActivity implements DrawerM
     private Toolbar toolbar;
     private KasirRecyclerView rvSellProduct;
     private EditText etProductName, etSellPrice, etPcs;
+    private boolean isPressedTwice = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,45 @@ public class SellingProductActivity extends AppCompatActivity implements DrawerM
 
         init();
 
+    }
+
+    @Override
+    public void onHandleBackPressed() {
+        drawerMenu.closeDrawer();
+    }
+
+    @Override
+    public boolean onMenuItemSelected(int itemId) throws Exception {
+        switch (itemId) {
+            case R.id.nav_add_new_product:
+                moveToAddProductActivity();
+                break;
+            case R.id.nav_list_product:
+                moveToListProductActivity();
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        closeAppWhenPressedTwice();
+    }
+
+    private void closeAppWhenPressedTwice() {
+        if(isPressedTwice) {
+            moveTaskToBack(true);
+        } else {
+            Toast.makeText(getApplicationContext(), "Tekan sekali lagi untuk keluar.", Toast.LENGTH_SHORT).show();
+            isPressedTwice = true;
+        }
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                isPressedTwice = false;
+            }
+        }, 2000);
     }
 
     private void init() {
@@ -51,19 +93,6 @@ public class SellingProductActivity extends AppCompatActivity implements DrawerM
         setSupportActionBar(toolbar);
     }
 
-    @Override
-    public boolean onMenuItemSelected(int itemId) throws Exception {
-        switch (itemId) {
-            case R.id.nav_add_new_product:
-                moveToAddProductActivity();
-                break;
-            case R.id.nav_list_product:
-                moveToListProductActivity();
-                break;
-        }
-        return true;
-    }
-
     private void moveToListProductActivity() {
         Intent intent = new Intent(getApplicationContext(), ProductListActivity.class);
         startActivity(intent);
@@ -76,8 +105,5 @@ public class SellingProductActivity extends AppCompatActivity implements DrawerM
         finish();
     }
 
-    @Override
-    public void onHandleBackPressed() {
-        drawerMenu.closeDrawer();
-    }
+
 }

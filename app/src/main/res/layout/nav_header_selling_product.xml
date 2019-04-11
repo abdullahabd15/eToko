@@ -14,6 +14,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
+        android:tint="@color/colorTextWhite"
         android:src="@drawable/ic_image_user" />
 
     <LinearLayout
