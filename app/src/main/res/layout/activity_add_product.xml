@@ -16,7 +16,9 @@
             android:id="@+id/tbAddProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/design_default_color_primary">
+            android:background="@color/design_default_color_primary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
@@ -117,6 +119,7 @@
         android:text="@string/btn_add"
         android:id="@+id/btnAddProduct"
         android:layout_gravity="bottom"
+        android:textColor="@color/colorTextWhite"
         android:layout_margin="@dimen/margin_15"/>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -14,7 +14,9 @@
             android:id="@+id/tbMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/design_default_color_primary">
+            android:background="@color/design_default_color_primary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
@@ -102,13 +104,13 @@
                 android:textColor="@color/colorPrimaryText"/>
         </LinearLayout>
 
-        <com.ab.project.kasirku.Component.KasirRecyclerView
+        <com.abe.project.eToko.Component.KasirRecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/default_margin"
             android:id="@+id/rvListProduct"
             android:background="@color/colorTransparentWhite">
-        </com.ab.project.kasirku.Component.KasirRecyclerView>
+        </com.abe.project.eToko.Component.KasirRecyclerView>
 
     </LinearLayout>
 
