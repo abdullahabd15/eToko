@@ -51,7 +51,7 @@ public class ProductListCard extends KasirCardView<ProductData> {
 
     private void setDataToUII() {
         try {
-            tvStockProduct.setText(String.valueOf(productData.stock));
+            tvStockProduct.setText(String.valueOf(productData.qty));
             tvProductName.setText(productData.productName);
             tvBuyPrice.setText(String.valueOf(productData.capitalPrice));
             tvSellingPrice.setText(String.valueOf(productData.sellingPrice));

@@ -133,7 +133,7 @@ public class AddProductActivity extends AppCompatActivity {
         etProductName.setText(productData.productName);
         etCapitalPrice.setText(String.valueOf(productData.capitalPrice));
         etSellingPrice.setText(String.valueOf(productData.sellingPrice));
-        etStock.setText(String.valueOf(productData.stock));
+        etStock.setText(String.valueOf(productData.qty));
 
         btnSaveProductData.setText(getString(R.string.btn_save));
     }
@@ -159,7 +159,7 @@ public class AddProductActivity extends AppCompatActivity {
             productData.productName = etProductName.getText().toString().trim();
             productData.capitalPrice = Long.parseLong(etCapitalPrice.getText().toString().trim());
             productData.sellingPrice = Long.parseLong(etSellingPrice.getText().toString().trim());
-            productData.stock = Integer.parseInt(etStock.getText().toString().trim());
+            productData.qty = Integer.parseInt(etStock.getText().toString().trim());
             productData.productId = this.productData.productId;
 
             dbHelper.updateProductData(productData);
@@ -177,7 +177,7 @@ public class AddProductActivity extends AppCompatActivity {
             productData.productName = etProductName.getText().toString().trim();
             productData.capitalPrice = Long.parseLong(etCapitalPrice.getText().toString().trim());
             productData.sellingPrice = Long.parseLong(etSellingPrice.getText().toString().trim());
-            productData.stock = Integer.parseInt(etStock.getText().toString().trim());
+            productData.qty = Integer.parseInt(etStock.getText().toString().trim());
 
             dbHelper.insertProductData(productData);
             alert.showAlertToast(getString(R.string.msg_product_has_saved));

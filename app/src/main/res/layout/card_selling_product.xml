@@ -3,111 +3,169 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:backgroundTint="@color/colorPrimary"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="@dimen/default_margin">
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:id="@+id/imgProduct"
-            android:src="@drawable/ic_product_image"/>
-
+        android:orientation="vertical"
+        android:background="@color/colorTextWhite"
+        android:layout_margin="1dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/margin_15">
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginStart="@dimen/margin_5"
+            android:layout_marginEnd="@dimen/margin_5">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/imgProduct"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/ic_product_image"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="10">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="3.5"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_product_code"
-                    android:textColor="@color/colorPrimaryText"/>
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_15">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/colon"
-                    android:textColor="@color/colorPrimaryText"/>
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_product_code"
+                        android:textColor="@color/colorPrimary"/>
 
-                <TextView
-                    android:id="@+id/tvProductCode"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"
-                    android:textColor="@color/colorPrimaryText"
-                    tools:text="kode produk" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/colon"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:id="@+id/tvProductCode"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5.5"
+                        android:textColor="@color/colorPrimary"
+                        tools:text="kode produk" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_product_name"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/colon"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="5.5"
+                        android:layout_height="wrap_content"
+                        tools:text="nama produk"
+                        android:id="@+id/tvProductName"
+                        android:textColor="@color/colorPrimary"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_price"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/colon"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="5.5"
+                        android:layout_height="wrap_content"
+                        tools:text="harga"
+                        android:id="@+id/tvPrice"
+                        android:textColor="@color/colorPrimary"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="4"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_qty"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/colon"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="5.5"
+                        android:layout_height="wrap_content"
+                        tools:text="Jumlah"
+                        android:id="@+id/tvQty"
+                        android:textColor="@color/colorPrimary"/>
+                </LinearLayout>
+
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="10">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="3.5"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_product_name"
-                    android:textColor="@color/colorPrimaryText"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="wrap_content"
-                    android:text="@string/colon"
-                    android:textColor="@color/colorPrimaryText"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="6"
-                    android:layout_height="wrap_content"
-                    tools:text="nama produk"
-                    android:id="@+id/tvProductName"
-                    android:textColor="@color/colorPrimaryText"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="10">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="3.5"
-                    android:layout_height="wrap_content"
-                    android:text="@string/title_price"
-                    android:textColor="@color/colorPrimaryText"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="0.5"
-                    android:layout_height="wrap_content"
-                    android:text="@string/colon"
-                    android:textColor="@color/colorPrimaryText"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="6"
-                    android:layout_height="wrap_content"
-                    tools:text="harga"
-                    android:id="@+id/tvPrice"
-                    android:textColor="@color/colorPrimaryText"/>
-            </LinearLayout>
-
         </LinearLayout>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/margin_5"
+            android:layout_marginEnd="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_3"
+            android:layout_height="0.5dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="@dimen/margin_3"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btnDeleteProduct"
+            android:layout_height="30dp"
+            android:text="@string/btn_delete"
+            android:background="@color/colorButtonFlagRed"
+            android:textColor="@color/colorTextWhite"
+            android:layout_gravity="end"
+            android:textAllCaps="false"
+            android:layout_marginEnd="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_3"/>
     </LinearLayout>
+
 </com.abe.project.eToko.Activity.SellingProduct.SellingProductCard>

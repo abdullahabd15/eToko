@@ -10,7 +10,8 @@ public class ProductData implements Serializable {
     public String productName = "";
     public long capitalPrice = 0;
     public long sellingPrice = 0;
-    public int stock = 0;
+    public int qty = 0;
+    public int qtyStock = 0;
 
     private static class Column {
         private static final String PRODUCT_ID = "productId";
@@ -18,7 +19,8 @@ public class ProductData implements Serializable {
         private static final String PRODUCT_NAME = "productName";
         private static final String CAPITAL_PRICE = "capitalPrice";
         private static final String SELLING_PRICE = "sellingPrice";
-        private static final String STOCK = "stock";
+        private static final String QTY_STOCK = "qtyStock";
+        private static final String QTY = "qty";
     }
 
     public static class Query {
@@ -29,7 +31,8 @@ public class ProductData implements Serializable {
                     Column.PRODUCT_NAME + " TEXT NOT NULL, " +
                     Column.CAPITAL_PRICE + " INTEGER NOT NULL, " +
                     Column.SELLING_PRICE + " INTEGER NOT NULL, " +
-                    Column.STOCK + " INTEGER NOT NULL)";
+                    Column.QTY_STOCK + " INTEGER NOT NULL, " +
+                    Column.QTY + " INTEGER NOT NULL)";
         }
 
         public static String dropTable() {
@@ -54,7 +57,7 @@ public class ProductData implements Serializable {
                     + Column.PRODUCT_CODE + " = '" + productData.productCode + "', "
                     + Column.CAPITAL_PRICE + " = " + productData.capitalPrice + ", "
                     + Column.SELLING_PRICE + " = " + productData.sellingPrice + ", "
-                    + Column.STOCK + " = " + productData.stock
+                    + Column.QTY + " = " + productData.qty
                     + " WHERE " + Column.PRODUCT_ID + " = " + productData.productId;
         }
 
@@ -62,14 +65,16 @@ public class ProductData implements Serializable {
             return "INSERT INTO " + TABLE_NAME + "("
                     + Column.PRODUCT_ID + ", " + Column.PRODUCT_CODE + ", "
                     + Column.PRODUCT_NAME + ", " + Column.CAPITAL_PRICE + ", "
-                    + Column.SELLING_PRICE + ", " + Column.STOCK + ")"
+                    + Column.SELLING_PRICE + ", " + Column.QTY_STOCK + ", "
+                    + Column.QTY + ")"
                     + " VALUES " + "("
                     + null + ", "
                     + "'" + productData.productCode + "', "
                     + "'" + productData.productName + "', "
                     + productData.capitalPrice + ", "
                     + productData.sellingPrice + ", "
-                    + productData.stock + ")";
+                    + productData.qtyStock + ", "
+                    + productData.qty + ")";
         }
 
         public static String deleteProductDataById(int productId) {

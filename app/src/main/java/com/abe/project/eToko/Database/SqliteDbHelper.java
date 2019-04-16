@@ -46,7 +46,8 @@ public class SqliteDbHelper extends SQLiteOpenHelper {
                 productData.productName = cursor.getString(2);
                 productData.capitalPrice = cursor.getInt(3);
                 productData.sellingPrice = cursor.getInt(4);
-                productData.stock = cursor.getInt(5);
+                productData.qtyStock = cursor.getInt(5);
+                productData.qty = cursor.getInt(6);
 
                 productDataList.add(productData);
                 cursor.moveToNext();

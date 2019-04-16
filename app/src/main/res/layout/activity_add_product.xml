@@ -12,14 +12,14 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/tbAddProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/design_default_color_primary"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-        </android.support.v7.widget.Toolbar>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
     <LinearLayout
@@ -41,6 +41,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/etProductCode"
                 android:hint="@string/title_product_code"
+                android:maxLines="1"
+                android:inputType="textCapCharacters"
                 android:textColor="@color/colorPrimaryText"
                 android:backgroundTint="@color/design_default_color_primary"/>
 
@@ -56,6 +58,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/etProductName"
                 android:hint="@string/title_product_name"
+                android:maxLines="1"
+                android:inputType="textCapSentences"
                 android:textColor="@color/colorPrimaryText"
                 android:textColorHint="@color/colorPrimaryText"
                 android:backgroundTint="@color/design_default_color_primary"/>
@@ -68,10 +72,13 @@
             android:textColorHint="@color/colorPrimaryText">
 
             <EditText
+                android:maxLines="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etBuyPrice"
                 android:hint="@string/title_capital_price"
+                android:inputType="number"
+                android:digits="0123456789"
                 android:textColor="@color/colorPrimaryText"
                 android:textColorHint="@color/colorPrimaryText"
                 android:backgroundTint="@color/design_default_color_primary"/>
@@ -84,10 +91,13 @@
             android:textColorHint="@color/colorPrimaryText">
 
             <EditText
+                android:maxLines="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etSellingPrice"
                 android:hint="@string/title_sell_price"
+                android:inputType="number"
+                android:digits="0123456789"
                 android:textColorHint="@color/colorPrimaryText"
                 android:textColor="@color/colorPrimaryText"
                 android:backgroundTint="@color/design_default_color_primary"/>
@@ -100,10 +110,13 @@
             android:textColorHint="@color/colorPrimaryText">
 
             <EditText
+                android:maxLines="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/etStock"
                 android:hint="@string/title_product_stock"
+                android:inputType="number"
+                android:digits="0123456789"
                 android:textColorHint="@color/colorPrimaryText"
                 android:textColor="@color/colorPrimaryText"
                 android:backgroundTint="@color/design_default_color_primary"/>
@@ -113,13 +126,13 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnAddProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/margin_15"
         android:background="@color/design_default_color_primary"
         android:text="@string/btn_add"
-        android:id="@+id/btnAddProduct"
-        android:layout_gravity="bottom"
-        android:textColor="@color/colorTextWhite"
-        android:layout_margin="@dimen/margin_15"/>
+        android:textColor="@color/colorTextWhite" />
 
 </android.support.design.widget.CoordinatorLayout>
