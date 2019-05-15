@@ -1,6 +1,7 @@
 package com.abe.project.eToko.Component;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
 
@@ -15,6 +16,20 @@ public class CustomAlert {
 
     public void showAlertToast(String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+    }
+
+    public void showAskDialog(String message, DialogInterface.OnClickListener okListener) {
+        try {
+            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
+            alertDialog.setCancelable(false)
+                    .setNegativeButton(context.getString(R.string.btn_cancel), null)
+                    .setPositiveButton(context.getString(R.string.btn_delete), okListener)
+                    .setTitle(context.getString(R.string.app_name))
+                    .setMessage(message);
+            alertDialog.create().show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void showErrorDialog(Exception e) {

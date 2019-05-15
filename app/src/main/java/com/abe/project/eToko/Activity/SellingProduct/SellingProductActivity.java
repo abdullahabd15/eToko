@@ -65,52 +65,18 @@ public class SellingProductActivity extends AppCompatActivity
         });
     }
 
-    private void addProductToChartList(ProductData item) {
-        final List<ProductData> list = new ArrayList<>(chartList);
-        if(validateTextInput()){
-            if(chartList.size() != 0) {
-                for(ProductData data: list) {
-                    if(data.productName.equals(item.productName)) {
-                        item.qty = data.qty + Integer.parseInt(etPcs.getText().toString().trim());
-                        chartList.remove(data);
-                        chartList.add(item);
-                        adapter.notifyDataSetChanged();
-                        clearTextInput();
-                        return;
-                    }
-                }
-                item.qty = Integer.parseInt(etPcs.getText().toString().trim());
-                chartList.add(item);
-                adapter.notifyDataSetChanged();
-                clearTextInput();
-            } else {
-                item.qty = Integer.parseInt(etPcs.getText().toString().trim());
-                chartList.add(item);
-                adapter.notifyDataSetChanged();
-                clearTextInput();
-            }
+    @Override
+    public void onCardClick(int position, View view, ProductData data) {
+        switch (view.getId()){
+            case R.id.btnDeleteProduct:
+                showDialogToDeleteProductFromChartList(data);
+                break;
         }
     }
 
-    private boolean validateTextInput() {
-        if(etProductName.getText().toString().isEmpty()) {
-            etProductName.setError(getString(R.string.msg_cannot_empty));
-            return false;
-        } else if(etPcs.getText().toString().isEmpty()) {
-            etPcs.setError(getString(R.string.msg_cannot_empty));
-            return false;
-        }
-        return true;
-    }
+    @Override
+    public void onLongCardClick(int position, View view, ProductData data) {
 
-    private void clearTextInput() {
-        etProductName.setText("");
-        etSellPrice.setText("");
-        etPcs.setText("");
-    }
-
-    private void setPriceProductToUI(ProductData item) {
-        etSellPrice.setText(String.valueOf(item.sellingPrice));
     }
 
     @Override
@@ -187,6 +153,54 @@ public class SellingProductActivity extends AppCompatActivity
 
     //region other function
 
+    private void addProductToChartList(ProductData item) {
+        final List<ProductData> list = new ArrayList<>(chartList);
+        if(validateTextInput()){
+            if(chartList.size() != 0) {
+                for(ProductData data: list) {
+                    if(data.productName.equals(item.productName)) {
+                        item.qty = data.qty + Integer.parseInt(etPcs.getText().toString().trim());
+                        chartList.remove(data);
+                        chartList.add(item);
+                        adapter.notifyDataSetChanged();
+                        clearTextInput();
+                        return;
+                    }
+                }
+                item.qty = Integer.parseInt(etPcs.getText().toString().trim());
+                chartList.add(item);
+                adapter.notifyDataSetChanged();
+                clearTextInput();
+            } else {
+                item.qty = Integer.parseInt(etPcs.getText().toString().trim());
+                chartList.add(item);
+                adapter.notifyDataSetChanged();
+                clearTextInput();
+            }
+        }
+    }
+
+    private boolean validateTextInput() {
+        if(etProductName.getText().toString().isEmpty()) {
+            etProductName.setError(getString(R.string.msg_cannot_empty));
+            return false;
+        } else if(etPcs.getText().toString().isEmpty()) {
+            etPcs.setError(getString(R.string.msg_cannot_empty));
+            return false;
+        }
+        return true;
+    }
+
+    private void clearTextInput() {
+        etProductName.setText("");
+        etSellPrice.setText("");
+        etPcs.setText("");
+    }
+
+    private void setPriceProductToUI(ProductData item) {
+        etSellPrice.setText(String.valueOf(item.sellingPrice));
+    }
+
     private void moveToListProductActivity() {
         Intent intent = new Intent(getApplicationContext(), ProductListActivity.class);
         startActivity(intent);
@@ -210,14 +224,21 @@ public class SellingProductActivity extends AppCompatActivity
         new Handler().postDelayed(() -> isPressedTwice = false, 2000);
     }
 
-    @Override
-    public void onCardClick(int position, View view, ProductData data) {
-
+    private void showDialogToDeleteProductFromChartList(ProductData data) {
+        alert.showAskDialog(getString(R.string.msg_ask_to_delete_product), (dialog, which) -> {
+            deleteProductFromChartList(data);
+            dialog.cancel();
+        });
     }
 
-    @Override
-    public void onLongCardClick(int position, View view, ProductData data) {
-
+    private void deleteProductFromChartList(ProductData data) {
+        for(ProductData productData: chartList) {
+            if(productData.productName.equals(data.productName) && productData.productCode.equals(data.productCode)) {
+                chartList.remove(productData);
+                adapter.notifyDataSetChanged();
+            }
+        }
     }
+
     //endregion
 }

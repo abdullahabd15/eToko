@@ -10,6 +10,7 @@
     <string name="btn_add">Tambah</string>
     <string name="btn_save">Simpan</string>
     <string name="btn_close">Tutup</string>
+    <string name="btn_cancel">Batal</string>
     <string name="btn_detail">Detail</string>
     <string name="btn_delete">Hapus</string>
     <string name="btn_add_to_chart">Tambah ke keranjang</string>
@@ -17,6 +18,7 @@
     <string name="msg_product_has_saved">Data produk berhasil disimpan.</string>
     <string name="msg_press_once_again_to_close">Tekan sekali lagi untuk keluar.</string>
     <string name="msg_cannot_empty">Harus diisi.</string>
+    <string name="msg_ask_to_delete_product">Hapus product ini? \n\n</string>
 
     <string name="title_pcs">PCS</string>
     <string name="title_rupiah">Rp. </string>
