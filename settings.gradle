@@ -1,1 +1,1 @@
-include ':app', ':libui'
+include ':app', ':libcore'
