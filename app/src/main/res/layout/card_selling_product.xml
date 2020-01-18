@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.abe.project.eToko.Activity.SellingProduct.SellingProductCard
+<com.ai.project.eToko.activity.selling_product.SellingProductCard
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -168,4 +168,4 @@
             android:layout_marginBottom="@dimen/margin_3"/>
     </LinearLayout>
 
-</com.abe.project.eToko.Activity.SellingProduct.SellingProductCard>
+</com.ai.project.eToko.activity.selling_product.SellingProductCard>

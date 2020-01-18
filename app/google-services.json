@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "15342638738",
+    "firebase_url": "https://aiapps.firebaseio.com",
+    "project_id": "aiapps",
+    "storage_bucket": "aiapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15342638738:android:d4945d4bfe9440fe20f84b",
+        "android_client_info": {
+          "package_name": "com.ai.project.etoko"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15342638738-gvct8pvo9a17a8fhls894vl6r70ou2mh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ai.project.etoko",
+            "certificate_hash": "a08539809f552fd40046c529b7085a72e29237b0"
+          }
+        },
+        {
+          "client_id": "15342638738-npdij9j7u2gqudehiajv830ptlmsdnks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlnccaxtVEkpiEyrNfwtDp2FWt_nyhlsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15342638738-npdij9j7u2gqudehiajv830ptlmsdnks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

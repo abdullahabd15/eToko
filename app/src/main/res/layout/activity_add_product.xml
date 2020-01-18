@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mainBackground"
+    tools:context=".activity.add_product.AddProductActivity">
 
-    tools:context=".Activity.AddProduct.AddProductActivity">
-
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/tbAddProduct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/design_default_color_primary"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"></android.support.v7.widget.Toolbar>
-    </android.support.design.widget.AppBarLayout>
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +30,7 @@
         android:layout_marginEnd="@dimen/margin_15"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorPrimaryText">
@@ -46,9 +45,9 @@
                 android:textColor="@color/colorPrimaryText"
                 android:backgroundTint="@color/design_default_color_primary"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorPrimaryText">
@@ -64,9 +63,9 @@
                 android:textColorHint="@color/colorPrimaryText"
                 android:backgroundTint="@color/design_default_color_primary"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorPrimaryText">
@@ -83,9 +82,9 @@
                 android:textColorHint="@color/colorPrimaryText"
                 android:backgroundTint="@color/design_default_color_primary"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorPrimaryText">
@@ -102,9 +101,9 @@
                 android:textColor="@color/colorPrimaryText"
                 android:backgroundTint="@color/design_default_color_primary"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/colorPrimaryText">
@@ -121,7 +120,7 @@
                 android:textColor="@color/colorPrimaryText"
                 android:backgroundTint="@color/design_default_color_primary"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
@@ -135,4 +134,4 @@
         android:text="@string/btn_add"
         android:textColor="@color/colorTextWhite" />
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

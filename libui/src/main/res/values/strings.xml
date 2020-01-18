@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">libUi</string>
+    
+    <string name="btn_cancel">Batal</string>
+    <string name="btn_delete">Hapus</string>
+    <string name="btn_yes">Ya</string>
+    <string name="btn_no">Tidak</string>
+    <string name="btn_close">Tutup</string>
+    <string name="btn_detail">Deatil</string>
+
+    <string name="title_error_detail">Detail Error</string>
+    <string name="title_error_occured">Terjadi kesalahan</string>
+</resources>
