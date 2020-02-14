@@ -5,7 +5,6 @@ import android.util.AttributeSet;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.ai.project.eToko.component.AiCardView;
 import com.ai.project.eToko.data.ProductData;
 import com.ai.project.eToko.R;
 

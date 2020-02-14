@@ -5,11 +5,11 @@ import android.util.AttributeSet;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.ai.project.eToko.component.AiCardView;
 import com.ai.project.eToko.data.ProductData;
 import com.ai.project.eToko.R;
+import com.google.android.material.card.MaterialCardView;
 
-public class ProductListCard extends AiCardView<ProductData> {
+public class ProductListCard extends MaterialCardView<ProductData> {
 
     private TextView tvStockProduct, tvProductName, tvBuyPrice, tvSellingPrice;
     private ProductData productData;

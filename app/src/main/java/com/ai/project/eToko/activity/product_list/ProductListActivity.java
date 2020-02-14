@@ -11,7 +11,6 @@ import android.view.View;
 
 import com.ai.project.eToko.activity.add_product.AddProductActivity;
 import com.ai.project.eToko.activity.selling_product.SellingProductActivity;
-import com.ai.project.eToko.component.AiCardView;
 import com.ai.project.eToko.component.AiRecyclerView;
 import com.ai.project.eToko.component.AiRecyclerviewAdapter;
 import com.ai.project.eToko.data.ProductData;
